@@ -1,0 +1,28 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/centos-6.7"
+  config.omnibus.chef_version = '12.10.24'
+  config.vbguest.auto_update = false 
+  config.ssh.forward_agent = true
+  config.ssh.insert_key = false
+
+  config.vm.network "private_network", ip: "192.168.33.100"
+  # config.vm.network :forwarded_port, guest: 9200, host: 9200
+  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.define :fuel_vagrant do |t|
+    end
+  config.vm.synced_folder "../", "/vagrant",
+        :create => true, 
+        :owner=> 'vagrant', 
+        :group=>'vagrant', 
+        :mount_options => ['dmode=777,fmode=777']
+
+
+  config.vm.provision :chef_solo do |chef|
+        chef.add_recipe "base"
+        chef.add_recipe "php-mysql-httpd"
+        chef.add_recipe "composer"
+    end
+end
