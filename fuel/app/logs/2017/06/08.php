@@ -17,3 +17,8 @@ WARNING - 2017-06-08 15:21:47 --> Fuel\Core\Fuel::init - The configured locale j
 INFO - 2017-06-08 15:21:47 --> Fuel\Core\Request::__construct - Creating a new main Request with URI = ""
 INFO - 2017-06-08 15:21:47 --> Fuel\Core\Request::execute - Called
 INFO - 2017-06-08 15:21:47 --> Fuel\Core\Request::execute - Setting main Request
+WARNING - 2017-06-08 16:03:48 --> Fuel\Core\Fuel::init - The configured locale ja_jp.UTF-8 is not installed on your system.
+WARNING - 2017-06-08 16:05:56 --> Fuel\Core\Fuel::init - The configured locale ja_jp.UTF-8 is not installed on your system.
+INFO - 2017-06-08 16:05:56 --> Fuel\Core\Request::__construct - Creating a new main Request with URI = ""
+INFO - 2017-06-08 16:05:56 --> Fuel\Core\Request::execute - Called
+INFO - 2017-06-08 16:05:56 --> Fuel\Core\Request::execute - Setting main Request

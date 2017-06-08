@@ -11,3 +11,8 @@
 ## Description
 
 * Project_one
+
+## git
+git remote add origin git@private:mokuben/project_one
+git config user.name “username”
+git config user.email "gmail.com"
