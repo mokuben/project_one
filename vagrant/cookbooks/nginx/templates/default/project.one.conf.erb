@@ -13,6 +13,11 @@ server {
         try_files $uri $uri/ /index.php$is_args$args;
     }
 
+    location ^~ /adult {
+        rewrite     /adult/(.*) /$1 break;
+        proxy_pass  http://adult.aucfan.com;
+    }
+
     location ~* \favicon.ico$ {
         access_log off;
         expires 30d;
