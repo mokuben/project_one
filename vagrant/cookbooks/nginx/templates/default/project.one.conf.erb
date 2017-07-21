@@ -1,0 +1,37 @@
+server {
+    listen 80;
+
+    root /var/www/html/public;
+
+    server_name project.one.com;
+
+    charset utf-8;
+    index index.html index.php;
+    error_page 404 /404.html;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~* \favicon.ico$ {
+        access_log off;
+        expires 30d;
+        add_header Cache-Control public;
+    }
+
+    location ~* \.(html|jpg|jpeg|gif|css|png|js|ico|swf|woff)$ {
+        gzip_static always;
+        gunzip on;
+        add_header Cache-Control public;
+        etag off;
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param FUEL_ENV development;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}

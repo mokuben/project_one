@@ -32,18 +32,13 @@ desktop.ini
 fuel/vendor/
 
 # dynamically generated files
-/fuel/app/logs/*/*/*
-/fuel/app/cache/*/*
-/fuel/app/config/crypt.php
-/nbproject/private/
-opsfiles/gulp/node_modules
-opsfiles/gulp/.sass-cache
-opsfiles/npm-debug.log
-opsfiles/ami-packer/credentials.json
+fuel/app/logs/*/*/*
+fuel/app/cache/*/*
+fuel/app/config/crypt.php
 public/assets/guide
 public/assets/.sass-cache
 .ruby-version
-opsfiles/vagrant/.vagrant/
+vagrant/.vagrant/*
 composer.lock
 test.jpg
 
