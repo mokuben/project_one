@@ -13,9 +13,8 @@ server {
         try_files $uri $uri/ /index.php$is_args$args;
     }
 
-    location ^~ /adult {
-        rewrite     /adult/(.*) /$1 break;
-        proxy_pass  http://adult.aucfan.com;
+    location ^~ /search1 {
+        proxy_pass  http://_botwsdr.aucfan.com/$request_uri;
     }
 
     location ~* \favicon.ico$ {
