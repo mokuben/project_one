@@ -7,6 +7,8 @@ require COREPATH.'bootstrap.php';
 \Autoloader::add_classes(array(
 	// Add classes you want to override here
 	// Example: 'View' => APPPATH.'classes/view.php',
+    'Factory' => APPPATH.'classes/factory.php',
+    'Product' => APPPATH.'classes/product.php',
 ));
 
 // Register the autoloader
