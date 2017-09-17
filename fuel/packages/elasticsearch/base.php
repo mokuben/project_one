@@ -1,7 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kakehi
- * Date: 2017/09/03
- * Time: 17:26
- */
+
+namespace Packages\Elasticsearch;
+
+abstract class Base
+{
+    protected function connect($hosts)
+    {
+        try {
+            $client = \Elasticsearch\ClientBuilder::create()
+                ->setHosts($hosts)
+                ->build();
+            return $client;
+        } catch (\Exception $ex) {
+            return false;
+        }
+    }
+
+}
