@@ -1,0 +1,48 @@
+# temp files from editors
+*~
+*.bak
+*.swp
+fuel/app/logs/
+public/assets/cache/*
+!.gitkeep
+bin/result
+*.ppr
+fuel/app/modules/*/logs/20*
+fuel/app/cache/
+fuel/packages/common/config/development/alert_mail.php
+opsfiles/vagrant/.vagrant
+opsfiles/vendor
+.DS_Store
+.buildpath
+.project
+.settings
+*.tmproj
+build
+.idea
+nbproject/
+fuel/app/tmp
+fuel/packages/package-aucfan
+
+# hidden files created by Windows
+Thumbs.db
+desktop.ini
+
+# any of the fuel packages installed by default
+/docs/
+fuel/vendor/
+
+# dynamically generated files
+/fuel/app/logs/*/*/*
+/fuel/app/cache/*/*
+/fuel/app/config/crypt.php
+/nbproject/private/
+opsfiles/gulp/node_modules
+opsfiles/gulp/.sass-cache
+opsfiles/npm-debug.log
+opsfiles/ami-packer/credentials.json
+public/assets/guide
+public/assets/.sass-cache
+.ruby-version
+opsfiles/vagrant/.vagrant/
+composer.lock
+test.jpg
